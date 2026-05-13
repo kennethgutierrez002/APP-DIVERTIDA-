@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>APP DIVERTIDA</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+```
+<h1>APP DIVERTIDA</h1>
+
+<div class="tarjeta">
+
+    <div class="pregunta" id="pregunta">
+        Presiona el botón 
+    </div>
+
+    <div class="respuesta" id="respuesta">
+
+    </div>
+
+</div>
+
+<button onclick="mostrarPregunta()">
+    Nueva Pregunta
+</button>
+```
+
+</div>
+
+<script>
+
+const preguntas = [
+
+{
+pregunta:"👨‍🏫 Maestro: ¿Por qué llegaste tarde?",
+respuesta:"😎 Alumno: Porque el reloj también quería dormir."
+},
+
+{
+pregunta:"👨‍🏫 Maestro: ¿Por qué no hiciste la tarea?",
+respuesta:"😂 Alumno: Mi perro se la comió... y luego yo me comí al perro."
+},
+
+{
+pregunta:"👨‍🏫 Maestro: ¿Qué aprendiste hoy?",
+respuesta:"🤓 Alumno: Que copiar rápido también es un talento."
+},
+
+{
+pregunta:"👨‍🏫 Maestro: Juan, ¿por qué hablas tanto?",
+respuesta:"🤣 Alumno: Porque el silencio me pone nervioso."
+},
+
+{
+pregunta:"👨‍🏫 Maestro: ¿Dónde está tu cuaderno?",
+respuesta:"😅 Alumno: En modo desaparecido."
+},
+
+{
+pregunta:"👨‍🏫 Maestro: ¿Qué significa estudiar?",
+respuesta:"🤔 Alumno: Buscar respuestas antes del examen."
+},
+
+{
+pregunta:"👨‍🏫 Maestro: ¿Por qué estás dormido?",
+respuesta:"😴 Alumno: Estoy cargando energía."
+},
+
+{
+pregunta:"👨‍🏫 Maestro: ¿Qué haces mirando por la ventana?",
+respuesta:"😂 Alumno: Buscando inspiración."
+}
+
+];
+
+function mostrarPregunta(){
+
+    const aleatorio =
+    Math.floor(Math.random() * preguntas.length);
+
+    document.getElementById("pregunta").innerHTML =
+    preguntas[aleatorio].pregunta;
+
+    document.getElementById("respuesta").innerHTML =
+    preguntas[aleatorio].respuesta;
+}
+
+</script>
+
+</body>
+</html>
